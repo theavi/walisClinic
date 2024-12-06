@@ -1,4 +1,4 @@
-package com.walia.walisClinic;
+package com.walia;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
