@@ -1,20 +1,19 @@
 package com.walia.controller;
 
 import com.walia.dto.UserDto;
-import com.walia.entity.User;
+import org.apache.catalina.User;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/user")
 public class UserController {
 
-    @GetMapping("/create")
-    public ResponseEntity<UserDto> create() {
-        System.out.println("Create user initiated:");
-        return ResponseEntity.ok(new UserDto());
+    @PostMapping(path="/create", produces= MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<UserDto> create(@RequestBody UserDto req) {
+        System.out.println("Create user initiated: "+req.getFirstName());
+        return  new ResponseEntity<UserDto>(req,HttpStatus.CREATED);
     }
 }
