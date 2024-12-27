@@ -1,0 +1,31 @@
+##27-12-24
+Interfaces: It is abstarct (Incomplete) class
+-----------------------------------------------------
+I.java
+Interface I{
+	public void test();     // method decalaration
+	public void test1(); 
+}
+------------------------------------------------------
+A.java
+abstract Class A impliments I{
+	public void welcome(){   // method body 
+	}
+	
+	public void test(){
+	
+	}
+	public void test1(); 
+}
+
+-------------------------------------------------------
+
+
+Controller -> service-> Repository/ Dao
+@RestController: provide facility to expose class outside teh world
+@RequestMapping : it map the incomming request to specific class/ method across.
+@PostMapping : map the post request to method
+@RequestBody : To pass the input to post method
+@Autowired : provide dependency injection in to target class
+
+http://10.110.30:walis/user/create
