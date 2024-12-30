@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,8 +27,16 @@ public class UserController {
         return new ResponseEntity<UserDto>(req, HttpStatus.CREATED);
     }
 
+    @GetMapping("/home")
+    public String home() {
+
+        return "home";
+    }
+
     @GetMapping("/create")
-    public String create() {
-        return "default";
+    public String create(ModelMap model) {
+        model.addAttribute("path", "user/createUser");
+        model.addAttribute("fragmentName", "createUser");
+        return "home";
     }
 }

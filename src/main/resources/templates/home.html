@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/header :: header"><title>Default</title></head>
+<body>
+<div class="container">
+    <div th:replace="common/header :: navbar">Body</div>
+    <div th:replace="@{${path}} :: ${fragmentName}"></div>
+    <div th:replace="common/footer :: footer"></div>
+</div>
+</body>
+</html>
