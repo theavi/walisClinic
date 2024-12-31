@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body th:fragment="updateUser">
+<form method="post" action="">
+    <div class="form-group">
+        <label for="email">User Name:</label>
+        <input type="email" class="form-control" id="email">
+    </div>
+    <div class="form-group">
+        <label for="pwd">Pass:</label>
+        <input type="password" class="form-control" id="pwd">
+    </div>
+    <div class="form-group">
+        <label for="pwd">Confirm Password:</label>
+        <input type="password" class="form-control" id="pwd">
+    </div>
+    <p class="form-actions">
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Change Password" title="Change password"/>
+    </div>
+    </p>
+</form>
+</body>
+</html>

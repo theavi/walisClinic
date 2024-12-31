@@ -39,4 +39,12 @@ public class UserController {
         model.addAttribute("fragmentName", "createUser");
         return "home";
     }
+
+    @GetMapping("/updateUser")
+    public String updateUser(ModelMap model)
+    {
+        model.addAttribute("path","user/updateUser");
+        model.addAttribute("fragmentName", "updateUser");
+        return "home";
+    }
 }
