@@ -40,7 +40,7 @@ public class UserController {
         return "home";
     }
 
-    @GetMapping("/updateUser")
+    @GetMapping("/update")
     public String updateUser(ModelMap model)
     {
         model.addAttribute("path","user/updateUser");
