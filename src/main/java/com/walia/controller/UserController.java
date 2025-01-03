@@ -32,6 +32,8 @@ public class UserController {
     public String create(Model model, @ModelAttribute("userObj") UserDto dto) {
         System.out.println("Create user initiated: " + dto.getFirstName());
         userService.create(dto);
+        model.addAttribute("path", "user/createUser");
+        model.addAttribute("fragmentName", "createUser");
         return "home";
     }
 
