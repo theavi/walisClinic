@@ -16,7 +16,7 @@ public class User extends  BaseEntity {
     private String password;
     private String firstName;
     private String lastName;
-    private Integer contact;
+    private String contact;
     private String address;
 
     public Integer getUserId() {
@@ -51,11 +51,11 @@ public class User extends  BaseEntity {
         this.address = address;
     }
 
-    public Integer getContact() {
+    public String getContact() {
         return contact;
     }
 
-    public void setContact(Integer contact) {
+    public void setContact(String contact) {
         this.contact = contact;
     }
 

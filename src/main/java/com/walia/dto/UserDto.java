@@ -6,8 +6,16 @@ public class UserDto {
     private String password;
     private String firstName;
     private String lastName;
-    private Integer contact;
+    private String contact;
     private String address;
+
+    public String getContact() {
+        return contact;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
+    }
 
     public Integer getUserId() {
         return userId;
@@ -48,15 +56,6 @@ public class UserDto {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-
-    public Integer getContact() {
-        return contact;
-    }
-
-    public void setContact(Integer contact) {
-        this.contact = contact;
-    }
-
     public String getAddress() {
         return address;
     }

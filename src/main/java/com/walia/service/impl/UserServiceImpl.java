@@ -8,6 +8,8 @@ import com.walia.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
+
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -16,7 +18,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDto create(UserDto dto) {
-       User user= UserMapper.toUserEntity(dto);
+        User user = UserMapper.toUserEntity(dto);
+        user.setCreateBy(1);
+        user.setCreatedDate(new Date());
         repository.save(user);
         return dto;
     }
