@@ -1,11 +1,6 @@
-package com.walia.entity;
+package com.walia.dto;
 
-import jakarta.persistence.*;
-
-@Entity
-public class Role extends  BaseEntity{
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class RoleDto {
     private Integer roleId;
     private String roleName;
 
@@ -25,4 +20,3 @@ public class Role extends  BaseEntity{
         this.roleName = roleName;
     }
 }
-
