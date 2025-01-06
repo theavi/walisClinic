@@ -5,6 +5,7 @@ import com.walia.service.RoleService;
 import com.walia.service.impl.RoleServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
@@ -14,12 +15,12 @@ public class RoleController {
     @Autowired
     private RoleService roleService;
 
-    @PostMapping(value = "/create",consumes = "application/json")
-    @ResponseBody
-    public String create(@RequestBody RoleDto dto){
-        System.out.println("Role Name is: "+ dto.getRoleName());
-        roleService.create(dto);
-        return "resource 1";
+    @GetMapping(value = "/create")
+    public String create(Model model){
+        System.out.println("Role Name is: ");
+        model.addAttribute("path","/role/createRole");
+        model.addAttribute("fragmentName","createRole");
+        return  "home";
     }
 
 }
